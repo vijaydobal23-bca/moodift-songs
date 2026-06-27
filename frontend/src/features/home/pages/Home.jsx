@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FavourateSongs from "../components/FavourateSongs";
-import UploadSongs from "../components/uploadSongs";
+import UploadSongs from "../components/UploadSongs";
 import ScanMood from "../components/ScanMood";
 import Player from "../../expression/components/Player";
 import { useSong } from "../hooks/useSong";
