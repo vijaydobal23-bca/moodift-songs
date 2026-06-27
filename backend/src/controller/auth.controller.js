@@ -1,7 +1,7 @@
 const userModel = require("../model/user.model");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { isValidElement } = require("react");
+
 const blacklistmodel = require("../model/blacklist.model");
 const redis = require("../config/cache");
 
