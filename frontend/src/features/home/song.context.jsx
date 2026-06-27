@@ -10,7 +10,7 @@ export const SongContextProvider = ({ children }) => {
   const [activeView, setActiveView] = useState("home");
 
   const api = axios.create({
-    baseURL: "https://moodift-songs-1.onrender.com/api",
+    baseURL: "https://moodift-songs.onrender.com/api",
     withCredentials: true
   });
 

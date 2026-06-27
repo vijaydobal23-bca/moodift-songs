@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true }));
 app.use(cookieParser());
 
 app.use(cors({ 
-  origin: ["http://localhost:5173", "https://moodift-songs-pbhm.vercel.app"],
+  origin: ["http://localhost:5173", "https://moodift-songs-y5mi.vercel.app"],
   credentials: true
 }));
 

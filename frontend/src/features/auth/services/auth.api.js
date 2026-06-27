@@ -1,6 +1,6 @@
 import axios from 'axios';
 const api = axios.create({
-  baseURL:"https://moodift-songs-1.onrender.com",
+  baseURL:"https://moodift-songs.onrender.com",
   withCredentials:true,
 });
 
