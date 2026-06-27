@@ -1,0 +1,175 @@
+/* Variables */
+$bg-base: #000000;
+$bg-panel: #121212;
+$bg-elevated: #242424;
+$bg-hover: #2a2a2a;
+$text-primary: #ffffff;
+$text-secondary: #b3b3b3;
+$accent-color: #1db954;
+$accent-hover: #1ed760;
+$font-family: 'Circular', 'Inter', 'Roboto', sans-serif;
+$border-radius: 8px;
+
+/* Sidebar */
+.spotify-sidebar-container {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  background-color: $bg-base;
+  
+  .spotify-sidebar-panel {
+    background-color: $bg-panel;
+    border-radius: $border-radius;
+    padding: 16px;
+  }
+  
+  .navigation-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: $text-primary;
+    }
+    
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: $text-secondary;
+        font-weight: 600;
+        cursor: pointer;
+        transition: color 0.2s ease;
+        
+        &:hover {
+          color: $text-primary;
+        }
+        
+        &.active {
+          color: $text-primary;
+        }
+      }
+    }
+  }
+
+  .library-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+    .library-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      
+      .library-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: $text-secondary;
+        font-weight: 600;
+        transition: color 0.2s;
+        cursor: pointer;
+        
+        &:hover {
+          color: $text-primary;
+        }
+      }
+      
+      .library-add-btn {
+        background: transparent;
+        border: none;
+        color: $text-secondary;
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        &:hover {
+          color: $text-primary;
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+    
+    .library-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      
+      .library-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        
+        &:hover {
+          background-color: rgba(255,255,255,0.05);
+        }
+        &.active {
+          background-color: rgba(255,255,255,0.1);
+        }
+        
+        .fav-square-icon, .upload-square-icon, .scan-square-icon {
+          width: 48px;
+          height: 48px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+        }
+        
+        .fav-square-icon {
+          background: linear-gradient(135deg, #450af5, #c4efd9);
+        }
+        .upload-square-icon {
+          background: linear-gradient(135deg, #f50a8b, #ffc8c8);
+        }
+        .scan-square-icon {
+          background: linear-gradient(135deg, #ff9900, #ffeb00);
+        }
+        
+        .library-item-meta {
+          display: flex;
+          flex-direction: column;
+          
+          .name {
+            font-size: 1rem;
+            color: $text-primary;
+            font-weight: 500;
+          }
+          .type {
+            font-size: 0.85rem;
+            color: $text-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .spotify-sidebar-container {
+    display: none;
+  }
+}

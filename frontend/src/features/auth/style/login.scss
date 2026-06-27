@@ -1,0 +1,112 @@
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 16px;
+  font-family: 'Montserrat', sans-serif;
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 1.5rem;
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    background-color: #121212;
+    border: 1px solid #282828;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    p {
+      color: #b3b3b3;
+      font-size: 0.85rem;
+      text-align: center;
+      margin-top: 0.5rem;
+
+      a {
+        color: #1db954;
+        font-weight: 600;
+        margin-left: 4px;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1ed760;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #b3b3b3;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      input {
+        padding: 12px;
+        border-radius: 4px;
+        border: 1px solid #404040;
+        background-color: #181818;
+        color: #ffffff;
+        outline: none;
+        font-size: 0.95rem;
+        transition: border-color 0.2s ease;
+
+        &:focus {
+          border-color: #1db954;
+        }
+
+        &::placeholder {
+          color: #727272;
+        }
+      }
+    }
+
+    .button {
+      background-color: #1db954;
+      color: #ffffff;
+      padding: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      transition: all 0.2s ease;
+      margin-top: 0.5rem;
+
+      &:hover {
+        background-color: #1ed760;
+        transform: scale(1.02);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
