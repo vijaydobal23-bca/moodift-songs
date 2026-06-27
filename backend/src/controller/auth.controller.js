@@ -42,7 +42,7 @@ async function registerUser(req, res) {
 
     return res.status(201).json({
       message: "User register successfully",
-      user: { id: user._id, username: user.username, email: user.email },
+      user: { id: user._id, username: user.username, email: user.email, role: user.role },
       token,
     });
   } catch (error) {
@@ -96,7 +96,7 @@ async function loginUser(req, res) {
 
     return res.status(200).json({
       message: "User login successfully",
-      user: { id: user._id, username: user.username, email: user.email },
+      user: { id: user._id, username: user.username, email: user.email, role: user.role },
       token,
     });
   } catch (error) {
